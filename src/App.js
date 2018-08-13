@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './componentes/Header';
-
+import Formulario from './componentes/Formulario';
 class App extends Component {
 
   token='A7TIUNJ2FNMZHBQFQUKW';
@@ -26,11 +26,20 @@ class App extends Component {
       })
   }
 
+  obtenerEventos=async(busqueda)=>{
+    console.log(busqueda);
+  }
 
   render() {
     return (
       <div className="App">
-        <Header/>       
+        <Header/> 
+        <div className="uk-container">
+          <Formulario
+            categorias={this.state.categorias}
+            obtenerEventos={this.obtenerEventos}
+          />
+        </div>      
       </div>
     );
   }
