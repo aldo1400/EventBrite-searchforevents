@@ -24,7 +24,7 @@ export default class Formulario extends Component {
 
         if(!id || !name_localized) return null;
         return(
-            <option value={id}>{name_localized}</option>
+            <option key={id} value={id}>{name_localized}</option>
         )
     }
 
@@ -32,6 +32,7 @@ export default class Formulario extends Component {
 
 
     const categorias=Object.keys(this.props.categorias);
+    console.log(categorias);
     return (
       <form onSubmit={this.buscarEvento}>
         <fieldset className="uk-fieldset uk-margin">
