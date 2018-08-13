@@ -32,7 +32,7 @@ class App extends Component {
 
   obtenerEventos=async(busqueda)=>{
     let url=`https://www.eventbriteapi.com/v3/events/search/?q=${busqueda.nombre}&sort_by=${this.ordenar}&categories=${busqueda.categoria}&token=${this.token}&locale=es_ES`;
-    console.log(url);
+    // console.log(url);
     await fetch(url)
       .then(respuesta=>{
         return respuesta.json();

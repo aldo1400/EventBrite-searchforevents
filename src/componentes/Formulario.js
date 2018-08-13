@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types';
 export default class Formulario extends Component {
 
     nombreEventoRef=React.createRef();
@@ -59,4 +59,9 @@ export default class Formulario extends Component {
         </form>
     )
   }
+}
+
+Formulario.propTypes={
+    obtenerEventos:PropTypes.func.isRequired,
+    categorias:PropTypes.array.isRequireds
 }

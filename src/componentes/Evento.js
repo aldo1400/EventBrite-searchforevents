@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const Evento=(props)=>{
     const {name}=props.info;
@@ -19,10 +20,18 @@ const Evento=(props)=>{
                 <div className="uk-card-body">
                     <h3 className="uk-card-title">{props.info.name.text}</h3>
                     <p>{desc}</p>
+                </div>"
+                <div className="uk-card-footer">
+                    <a className="uk-button uk-button-secondary" href={props.info.url} target="__blank">
+                        Más información
+                    </a>
                 </div>
             </div>
         </div>
     )
 }
 
+Evento.propTypes={
+    info:PropTypes.object.isRequired
+}
 export default Evento;
